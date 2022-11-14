@@ -11,9 +11,9 @@
 //
 //===----------------------------------------------------------------------===//
 
-#include "while/MLIRGen.h"
-#include "while/AST.h"
-#include "while/Dialect.h"
+#include "toy/MLIRGen.h"
+#include "toy/AST.h"
+#include "toy/Dialect.h"
 
 #include "mlir/IR/Attributes.h"
 #include "mlir/IR/Builders.h"
@@ -27,8 +27,8 @@
 #include "llvm/Support/raw_ostream.h"
 #include <numeric>
 
-using namespace mlir::while_lang;
-using namespace while_lang;
+using namespace mlir::toy;
+using namespace toy;
 
 using llvm::ArrayRef;
 using llvm::cast;
@@ -220,8 +220,8 @@ private:
 
     // 'return' takes an optional expression, handle that case here.
     mlir::Value expr = nullptr;
-    if (ret.getExpr().has_value()) {
-      if (!(expr = mlirGen(*ret.getExpr().value())))
+    if (ret.getExpr().hasValue()) {
+      if (!(expr = mlirGen(*ret.getExpr().getValue())))
         return mlir::failure();
     }
 

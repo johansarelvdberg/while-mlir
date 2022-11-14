@@ -22,11 +22,11 @@
 
 /// Include the auto-generated header file containing the declaration of the toy
 /// dialect.
-#include "while/Dialect.h.inc"
+#include "toy/Dialect.h.inc"
 
 /// Include the auto-generated header file containing the declarations of the
 /// toy operations.
 #define GET_OP_CLASSES
-#include "while/Ops.h.inc"
+#include "toy/Ops.h.inc"
 
 #endif // MLIR_TUTORIAL_TOY_DIALECT_H_

@@ -19,9 +19,9 @@
 #include "mlir/IR/OpImplementation.h"
 
 using namespace mlir;
-using namespace mlir::while_lang;
+using namespace mlir::toy;
 
-#include "while/Dialect.cpp.inc"
+#include "toy/Dialect.cpp.inc"
 
 //===----------------------------------------------------------------------===//
 // ToyDialect
